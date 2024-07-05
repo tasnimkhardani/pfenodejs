@@ -41,6 +41,7 @@ model SujetUser {
   id      Int   @id @default(autoincrement())
   userId  Int
   sujetId Int
+
   user    User  @relation(fields: [userId], references: [id])
   sujet   Sujet @relation(fields: [sujetId], references: [id])
 
